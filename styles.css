@@ -1,7 +1,12 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Matthew ADcock */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Seymour+One&display=swap');
+
+
+
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,7 +69,10 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+main{
+    min-width: 400px;
+    font-family: var(--font);
+}
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -84,9 +92,9 @@ table {
     overflow: hidden;
 }
 
-h1::before  {
+h1::before {
     content: "";
-
+    float: left;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
