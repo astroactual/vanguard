@@ -76,11 +76,15 @@ body{
 
 #header {
     background-color: var(--black);
+    box-shadow: 0 5px 5px var(--blue);
+    position: relative;
+    z-index: 10;
+
 }
 
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
-.container {
+.container, .results-container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -105,7 +109,6 @@ nav{
     padding-top: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    box-shadow: 0 5px 5px var(--blue);
     position: relative;
     z-index: 10;
     
@@ -363,13 +366,17 @@ form{
 }
 
 form label, form input, textarea   {
-    display: block;
+    display: inline-block;
     width: 98.5%;
     padding-bottom: 2em;
 }
 
 input, textarea{
     border: 3px solid var(--blue);
+}
+
+textarea    {
+    height: 100px;
 }
 
 form label{
@@ -472,20 +479,50 @@ h1, h2, h3, .button-wrapper{
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 800px)  {
 
-    #results {
+    #results-grid {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     .results-container {
         flex-direction: row;
         justify-content: space-between;
     }
     .results-table {
-        width: 50%;
+        margin: auto;
+        width: 95%;
+        
     }
     .bar-chart {
         width: 50%;
     }
 
+    #offer  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
 
 /* MEDIA QUERIES (LARGE) */
+
+@media screen and (min-width: 1024px)  {
+
+    #offer  {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    form    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1em;
+    }
+
+    form div {
+        flex: 1 1 400px;
+    }
+
+}
