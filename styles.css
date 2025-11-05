@@ -407,16 +407,6 @@ input:focus, textarea:focus{
 
 
 
-
-
-
-
-
-
-
-
-
-
 #bar-chart {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
